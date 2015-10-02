@@ -2,10 +2,11 @@
 
 #include "static_text_window.h"
 #include "scroll_layer_window.h"
+#include "text_attributes_window.h"
 
 #define FOCUSED_TALL_CELL_HEIGHT   60
 #define UNFOCUSED_TALL_CELL_HEIGHT 30
-#define NUM_WINDOWS                2
+#define NUM_WINDOWS                3
 
 static Window *s_main_window;
 static MenuLayer *s_menu_layer;
@@ -21,6 +22,9 @@ static void draw_row_callback(GContext *ctx, Layer *cell_layer, MenuIndex *cell_
       break;
     case 1:
       menu_cell_basic_draw(ctx, cell_layer, "Paging ScrollLayer", NULL, NULL);
+      break;
+    case 2:
+      menu_cell_basic_draw(ctx, cell_layer, "GTextAttributes", NULL, NULL);
       break;
     default:
       break;
@@ -40,6 +44,9 @@ static void select_callback(struct MenuLayer *menu_layer, MenuIndex *cell_index,
       break;
     case 1:
       scroll_layer_window_push();
+      break;
+    case 2:
+      text_attributes_window_push();
       break;
     default:
       break;
