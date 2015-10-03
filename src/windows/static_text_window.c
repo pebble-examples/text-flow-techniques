@@ -11,7 +11,8 @@ static void window_load(Window *window) {
   text_layer_set_text(s_title_layer, "Fastest Ship in the Universe Stolen!");
   text_layer_set_text_alignment(s_title_layer, GTextAlignmentCenter);
   text_layer_set_font(s_title_layer, fonts_get_system_font(FONT_KEY_GOTHIC_18_BOLD));
-  text_layer_set_background_color(s_title_layer, GColorClear);
+  text_layer_set_background_color(s_title_layer, GColorBlueMoon);
+  text_layer_set_text_color(s_title_layer, GColorWhite);
   layer_add_child(window_layer, text_layer_get_layer(s_title_layer));
 
   // Must be after added to the view heirachy
@@ -22,7 +23,8 @@ static void window_load(Window *window) {
   s_body_layer = text_layer_create(GRect(bounds.origin.x, bounds.origin.y + title_size.h + 5, bounds.size.w, bounds.size.h));
   text_layer_set_text(s_body_layer, "The President of the Galaxy is on the run from Galactic Police after a ceremonial ship launch, quoted as saying \"I hereby kidnap myself, and I'm taking the ship with me!\"");
   text_layer_set_text_alignment(s_body_layer, GTextAlignmentCenter);
-  text_layer_set_background_color(s_body_layer, GColorClear);
+  text_layer_set_background_color(s_body_layer, GColorPictonBlue);
+  text_layer_set_text_color(s_body_layer, GColorWhite);
   layer_add_child(window_layer, text_layer_get_layer(s_body_layer));
 
   text_layer_enable_screen_text_flow_and_paging(s_body_layer, 2);
