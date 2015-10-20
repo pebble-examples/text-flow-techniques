@@ -1,2 +1,6 @@
-# text-flow-example-dev
-Private repo for review of text flow example app.
+# text-flow-techniques
+
+![screenshot1](screenshots/screenshot1.png)
+
+Example app demonstrating text flow and paging on round displays using
+`ScrollLayer`, `TextLayer`, and `GTextAttributes`.
